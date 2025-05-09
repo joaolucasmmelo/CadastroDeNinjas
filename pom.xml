@@ -12,7 +12,7 @@
     <artifactId>CadastrosDeNinjas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>CadastrosDeNinjas</name>
-    <description>CadastrosDeNinjas</description>
+    <description>An API for ninja resgistration</description>
     <url/>
     <licenses>
         <license/>
