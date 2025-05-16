@@ -1,6 +1,10 @@
-package java10x.cadastrosdeninjas;
+package java10x.cadastrosdeninjas.Ninjas;
 
+import java.util.ArrayList;
 import jakarta.persistence.*;
+import java10x.cadastrosdeninjas.Missoes.MissoesModel;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -12,6 +16,19 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    // Many Ninjas to One Mission
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //Foreing Key / Chave estrangeira
+    private MissoesModel missoes;
+
+    public MissoesModel getMissoes() {
+        return missoes;
+    }
+
+    public void setMissoes(MissoesModel missoes) {
+        this.missoes = missoes;
+    }
 
     public NinjaModel(){
 
